@@ -203,7 +203,7 @@ let g:Powerline_symbols='unicode'
 let NERDShutUp=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DoxygenToolkit
-map   fg   :Dox < cr >
+map   fg   :Dox <cr>
 let  g:DoxygenToolkit_authorName = "LiuFG"
 let  g:DoxygenToolkit_CopyrightString = "Beijing JN TASS Technology Co.,Ltd."
 let  g:DoxygenToolkit_licenseTag = "My own license\<enter>"
@@ -227,11 +227,13 @@ map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> cscope -Rbq <
 let NERDTreeWinPos=1
 map <F3> :NERDTreeToggle<CR>
 
-" F2 TagList切换
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-map <F2> :Tlist<CR>
+" F2 TagBar切换
+nmap <F2> :TagbarToggle<CR>
+" 启动时自动focus
+let g:tagbar_autofocus = 1
+let g:tagbar_left = 1
 
+" MarkDown文件格式
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mkd
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_folding_level = 6
@@ -243,15 +245,15 @@ set conceallevel=2
 " Vundle配置
 filetype off
 
-"此处规定Vundle的路径
+" 此处规定Vundle的路径
 set rtp+=d:/Tools/Vim/vimfiles/Vundle.vim
 
 call vundle#begin()
 
 "Vundle插件管理
 Bundle 'gmarik/vundle'
-"Tlist
-Bundle 'taglist.vim'
+"TagBar
+Bundle 'majutsushi/tagbar'
 "Doxy
 Bundle 'DoxygenToolkit.vim'
 "注释工具

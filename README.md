@@ -2,7 +2,7 @@
 
 ## 插件内容
 1. 使用`Vundle`管理插件  
-2. 使用`taglist`进行tag浏览（窗口左侧打开），手动安装ctags  
+2. 使用`taglist`浏览变量、函数列表（窗口左侧打开），手动安装ctags  
 3. 使用`DoxygenToolkit`，Doxygen风格的注释工具  
 4. 快速注释工具`The-NERD-Commenter`  
 5. 文件浏览工具`The-NERD-tree`，（窗口右侧打开）  
