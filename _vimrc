@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Ä¬ÈÏÉèÖÃ"
+"é»˜è®¤è®¾ç½®"
 set nocompatible
 "source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
@@ -31,9 +31,9 @@ function MyDiff()
 endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ï°¹ßÉèÖÃ
+" ä¹ æƒ¯è®¾ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ×î´ó»¯ÔËĞĞ
+" æœ€å¤§åŒ–è¿è¡Œ
 if has("win32")
  au GUIEnter * simalt ~x
 endif
@@ -42,71 +42,71 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
 
 set nobackup		" do not keep a backup file
 
-let mapleader = ';'			" ÓÃ;×÷ÎªÃüÁîÇ°×º
+let mapleader = ';'			" ç”¨;ä½œä¸ºå‘½ä»¤å‰ç¼€
 
-"set guioptions=egmrLtT     " Ä¬ÈÏÑ¡Ïî
-set guioptions+=c       " Ê¹ÓÃ×Ö·ûÌáÊ¾¿ò
-set guioptions-=m       " Òş²Ø²Ëµ¥À¸
-set guioptions-=g       " »ÒÉ«²Ëµ¥
-set guioptions-=T       " Òş²Ø¹¤¾ßÀ¸
-set guioptions-=L       " Òş²Ø×ó²à¹ö¶¯Ìõ
-set guioptions-=r       " Òş²ØÓÒ²à¹ö¶¯Ìõ
-set guioptions-=l       " Òş²Ø×ó²à¹ö¶¯Ìõ
-set guioptions-=b       " Òş²Øµ×²¿¹ö¶¯Ìõ
-"set showtabline=0      " Òş²ØTabÀ¸
-set cursorline          " ¸ßÁÁÏÔÊ¾µ±Ç°ĞĞ
+"set guioptions=egmrLtT     " é»˜è®¤é€‰é¡¹
+set guioptions+=c       " ä½¿ç”¨å­—ç¬¦æç¤ºæ¡†
+set guioptions-=m       " éšè—èœå•æ 
+set guioptions-=g       " ç°è‰²èœå•
+set guioptions-=T       " éšè—å·¥å…·æ 
+set guioptions-=L       " éšè—å·¦ä¾§æ»šåŠ¨æ¡
+set guioptions-=r       " éšè—å³ä¾§æ»šåŠ¨æ¡
+set guioptions-=l       " éšè—å·¦ä¾§æ»šåŠ¨æ¡
+set guioptions-=b       " éšè—åº•éƒ¨æ»šåŠ¨æ¡
+"set showtabline=0      " éšè—Tabæ 
+set cursorline          " é«˜äº®æ˜¾ç¤ºå½“å‰è¡Œ
 
-" ÏÔÊ¾ĞĞºÅ
+" æ˜¾ç¤ºè¡Œå·
 set nu!
 set relativenumber
 
-" ×Ô¶¯Ëõ½ø
+" è‡ªåŠ¨ç¼©è¿›
 set autoindent
 set cindent
 
-" Óï·¨¸ßÁÁÏÔÊ¾
+" è¯­æ³•é«˜äº®æ˜¾ç¤º
 syntax enable
 syntax on
-colorscheme desert			" ÅäÉ«·½°¸
+colorscheme desert			" é…è‰²æ–¹æ¡ˆ
 
-" Tab¼üµÄ¿í¶È
+" Tabé”®çš„å®½åº¦
 set tabstop=4
-" Í³Ò»Ëõ½øÎª4
+" ç»Ÿä¸€ç¼©è¿›ä¸º4
 if has("autocmd") 
-autocmd FileType java,mkd,c,cpp,vim set expandtab	"¶ÔÖ¸¶¨ÎÄ¼şÀàĞÍ£¬Ê¹ÓÃ¿Õ¸ñ´úÌætab
+autocmd FileType java,mkd,c,cpp,vim set expandtab	"å¯¹æŒ‡å®šæ–‡ä»¶ç±»å‹ï¼Œä½¿ç”¨ç©ºæ ¼ä»£æ›¿tab
 endif "has("autocmd")
 
 set softtabstop=4
 set shiftwidth=4
-" ÉèÖÃTABºÍĞĞÎ²¿Õ¸ñµÄÏÔÊ¾
+" è®¾ç½®TABå’Œè¡Œå°¾ç©ºæ ¼çš„æ˜¾ç¤º
 "set list
 "set listchars=tab:>-,trail:-
 
-" Í¨¹ıÊ¹ÓÃ: commandsÃüÁî£¬¸æËßÎÒÃÇÎÄ¼şµÄÄÄÒ»ĞĞ±»¸Ä±ä¹ı
+" é€šè¿‡ä½¿ç”¨: commandså‘½ä»¤ï¼Œå‘Šè¯‰æˆ‘ä»¬æ–‡ä»¶çš„å“ªä¸€è¡Œè¢«æ”¹å˜è¿‡
 set report=0
-" ÎªC³ÌĞòÌá¹©×Ô¶¯Ëõ½ø
+" ä¸ºCç¨‹åºæä¾›è‡ªåŠ¨ç¼©è¿›
 set smartindent
-" ËÑË÷ºöÂÔ´óĞ¡Ğ´
+" æœç´¢å¿½ç•¥å¤§å°å†™
 "set ignorecase
-" ËÑË÷Öğ×Ö·û¸ßÁÁ
+" æœç´¢é€å­—ç¬¦é«˜äº®
 set hlsearch
-" ÔÚĞĞºÍ¶Î¿ªÊ¼´¦Ê¹ÓÃÖÆ±í·û
+" åœ¨è¡Œå’Œæ®µå¼€å§‹å¤„ä½¿ç”¨åˆ¶è¡¨ç¬¦
 "set smarttab
-" ÀúÊ·¼ÇÂ¼Êı
+" å†å²è®°å½•æ•°
 set history=1000
-" ±àÂëÉèÖÃ
+" ç¼–ç è®¾ç½®
 "set enc=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
-" ÓïÑÔÉèÖÃ
+" è¯­è¨€è®¾ç½®
 "set langmenu=zh_CN.UTF-8
 set langmenu=zh_CN.GBK
 set helplang=cn
 
-" ×´Ì¬ĞĞÏÔÊ¾µÄÄÚÈİ£¨°üÀ¨ÎÄ¼şÀàĞÍºÍ½âÂë£©
+" çŠ¶æ€è¡Œæ˜¾ç¤ºçš„å†…å®¹ï¼ˆåŒ…æ‹¬æ–‡ä»¶ç±»å‹å’Œè§£ç ï¼‰
 " set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 " set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" À¨ºÅ×Ô¶¯²¹È«
+" æ‹¬å·è‡ªåŠ¨è¡¥å…¨
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
 :inoremap { {}<ESC>i
@@ -141,7 +141,7 @@ function QuoteDelim(char)
 endf
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Alt+[n] ÇĞ»»tab"
+" Alt+[n] åˆ‡æ¢tab"
 :nn <M-1> 1gt
 :nn <M-2> 2gt
 :nn <M-3> 3gt
@@ -153,7 +153,7 @@ endf
 :nn <M-9> 9gt
 :nn <M-0> :tablast<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ²å¼şÉèÖÃ
+" æ’ä»¶è®¾ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " taglist
 let Tlist_Show_One_File=1
@@ -170,21 +170,21 @@ let g:winManagerWindowLayout='FileExplorer|TagList'
 nmap wm :WMToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Cscope Éè¶¨ÊÇ·ñÊ¹ÓÃ quickfix ´°¿ÚÀ´ÏÔÊ¾ cscope ½á¹û
+" Cscope è®¾å®šæ˜¯å¦ä½¿ç”¨ quickfix çª—å£æ¥æ˜¾ç¤º cscope ç»“æœ
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
 :cs add .\cscope.out
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" MiniBufExplorer ¿ìËÙä¯ÀÀºÍ²Ù×÷Buffer
+" MiniBufExplorer å¿«é€Ÿæµè§ˆå’Œæ“ä½œBuffer
 "let g:miniBufExplMapCTabSwitchBufs = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" a.vim	Ê¹ÓÃCtrl+a¿ìËÙÇĞ»».c\.hÎÄ¼ş
+" a.vim	ä½¿ç”¨Ctrl+aå¿«é€Ÿåˆ‡æ¢.c\.hæ–‡ä»¶
 map <C-A> :A <CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" OmniCppComplete ×Ô¶¯²¹È«
-filetype plugin indent on		"´ò¿ªÎÄ¼şÀàĞÍ¼ì²â
+" OmniCppComplete è‡ªåŠ¨è¡¥å…¨
+filetype plugin indent on		"æ‰“å¼€æ–‡ä»¶ç±»å‹æ£€æµ‹
 set completeopt=longest,menu
 let OmniCpp_DefaultNamespaces = ["std","MyNamespace"]
 let OmniCpp_ShowPrototypeInAbbr = 1
@@ -195,11 +195,11 @@ let OmniCpp_ShowPrototypeInAbbr = 1
 "let g:SuperTabDefaultCompletionType="<C-X><C-O>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" PowerlineÉèÖÃ
+" Powerlineè®¾ç½®
 set laststatus=2
 let g:Powerline_symbols='unicode'
 
-" ¶ÔNERD_commenterµÄÉèÖÃ
+" å¯¹NERD_commenterçš„è®¾ç½®
 let NERDShutUp=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DoxygenToolkit
@@ -216,24 +216,24 @@ let  g:DoxygenToolkit_maxFunctionProtoLines   =   30
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" °´¼üÓ³Éä/ËµÃ÷
+" æŒ‰é”®æ˜ å°„/è¯´æ˜
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" F12Ë¢ĞÂtags
+" F12åˆ·æ–°tags
 map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR> cscope -Rbq <CR>
-" Ctrl-]    Ìø×ªµ½¹â±êËùÔÚ·ûºÅµÄ¶¨Òå
-" Ctrl-t    »Øµ½ÉÏ´ÎÌø×ªÇ°µÄÎ»ÖÃ¡£
+" Ctrl-]    è·³è½¬åˆ°å…‰æ ‡æ‰€åœ¨ç¬¦å·çš„å®šä¹‰
+" Ctrl-t    å›åˆ°ä¸Šæ¬¡è·³è½¬å‰çš„ä½ç½®ã€‚
 "
-" F3 NERDTreeÇĞ»»
+" F3 NERDTreeåˆ‡æ¢
 let NERDTreeWinPos=1
 map <F3> :NERDTreeToggle<CR>
 
-" F2 TagBarÇĞ»»
+" F2 TagBaråˆ‡æ¢
 nmap <F2> :TagbarToggle<CR>
-" Æô¶¯Ê±×Ô¶¯focus
+" å¯åŠ¨æ—¶è‡ªåŠ¨focus
 let g:tagbar_autofocus = 1
 let g:tagbar_left = 1
 
-" MarkDownÎÄ¼ş¸ñÊ½
+" MarkDownæ–‡ä»¶æ ¼å¼
 au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mkd
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_folding_level = 6
@@ -242,35 +242,36 @@ let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_emphasis_multiline = 0
 set conceallevel=2
 
-" VundleÅäÖÃ
+" Vundleé…ç½®
 filetype off
 
-" ´Ë´¦¹æ¶¨VundleµÄÂ·¾¶
-set rtp+=d:/Tools/Vim/vimfiles/Vundle.vim
+" æ­¤å¤„è§„å®šVundleçš„è·¯å¾„
+set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-"Vundle²å¼ş¹ÜÀí
-Bundle 'gmarik/vundle'
+"Vundleæ’ä»¶ç®¡ç†
+"Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 "TagBar
 Bundle 'majutsushi/tagbar'
 "Doxy
 Bundle 'DoxygenToolkit.vim'
-"×¢ÊÍ¹¤¾ß
+"æ³¨é‡Šå·¥å…·
 Bundle 'The-NERD-Commenter'
-"ÎÄ¼şä¯ÀÀ
+"æ–‡ä»¶æµè§ˆ
 Bundle 'The-NERD-tree'
-"´úÂë²¹È«
+"ä»£ç è¡¥å…¨
 Bundle 'OmniCppComplete'
-"×´Ì¬À¸
-Bundle 'Lokaltog/vim-powerline'
-"CÓïÑÔÔ´ÎÄ¼şÓÚÍ·ÎÄ¼ş¿ìËÙÇĞ»»
+"çŠ¶æ€æ 
+"Bundle 'Lokaltog/vim-powerline'
+"Cè¯­è¨€æºæ–‡ä»¶äºå¤´æ–‡ä»¶å¿«é€Ÿåˆ‡æ¢
 Bundle 'a.vim'
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
 
-"´ËĞĞÇ°Ìí¼ÓÒª°²×°µÄ²å¼şÁĞ±í
+"æ­¤è¡Œå‰æ·»åŠ è¦å®‰è£…çš„æ’ä»¶åˆ—è¡¨
 call vundle#end()
 filetype plugin indent on
 
